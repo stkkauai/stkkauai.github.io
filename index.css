@@ -1,0 +1,40 @@
+#herobackground {
+    background: url(Images/homebg3.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero {
+    text-align: left;
+    transition-duration: 0.5s;
+    border-radius: 20px;
+    color: white;
+    padding-left: 5%;
+}
+
+.heroheading {
+    font-size: 800%;
+    height: 100vh;
+    color: white;
+    transition-duration: 0.1s;
+}
+
+.herobutton {
+    position: absolute;
+    transform: translate(0%, 650%);
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 100px;
+}
+
+/* Begin more info */
+
+.infoheight {
+    height: 200px;
+    position: relative;
+    z-index: 1;
+}
