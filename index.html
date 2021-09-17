@@ -10,63 +10,60 @@
     <link rel="stylesheet" href="allpages.css">
     <script src="allpages.js"></script>
     <script src="index.js"></script>
+    <script>
+    function myFunction(x) {
+      x.classList.toggle("change");
+      
+    }</script>
 </head>
-<body id='body'>
+<body>
 
-<nav id="navbar">
-  <div class='navitems lato'>
-   <a class='active'>Home</a>
-   <a href="#news">News</a>
-   <a href="#contact">Contact</a>
- </div>
+<nav>
+  <div id="navbar"><div class="container" onclick="myFunction(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div></div>
 </nav>
 
-<div id='herobackground'>
-    <p class='center padding20 notif lato'>Scroll for Menu</p>
-    <header>
-    <div class='hero'><button class='lato herobutton'>Learn More</button><h1 class='heroheading2 urbanist'>We want <em>sustainable</em> tourism.</h1><h1 class='heroheading urbanist'>We want</h1>
-      <h1 class='heroheading1 urbanist'><em>sustainable</em> tourism.</h1></div></header>
-    </header>
+<div class='hero'>
+  <div class='heroblur'>
+  <div class='heroimg'>
+    <div id='heroimg1'></div>
+    <div id='heroimg2'></div>
+    <div id='heroimg3'></div>
+    <div id='heroimg4'></div>
+    <div id='heroimg5'></div>
+    <div id='heroimg6'></div>
+    <div id='heroimg7'></div>
+  </div>
+  <div id='heropar' class='heropar'>
+    <script>
+      window.addEventListener("scroll", function() {
+        const distance = window.scrollY;
+        document.querySelector(".heropar").style.transform = `translateY(${distance *
+          0.5}px)`;
+        document.querySelector(
+          ".heropar]"
+        ).style.transform = `translateY(${distance * 0.5}px)`;
+        setTimeout(() => {
+      });})
+      </script>  
+  <div class='herotext' id='herotext'>
+    <h3 id='herotext1' class='urbanist heromedium' title='STK'>Sustainable Tourism Kauai</h3>
+    <h1 id='herotext2' class='urbanist herolarge'>"Respect our aina and we'll respect you!"</h1>
+  </div>
+  </div>
 </div>
-<div class='white infoheight'>
-  <h1 class='urbanist moreinfo'><em>Respect our aina and we'll respect you!</em></h1>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
+<div class='whiteover'>
+<div id='cardabout'></div>
+  <div class='about'>
+    <h1 class='urbanist aboutbig'>We want to encourage sustainable and healthy tourism practices around our island.</h1>
+    <h2 class='lato aboutsmall'>Tourists have been harming local cultural sites and animals! We want to educate them about the rules of our island, so that we can all live without the fear of our precious island being destroyed.</h2>
+  </div>
+</div>
 
-
+</body>
 </html>
