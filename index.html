@@ -12,11 +12,26 @@
     <script src="index.js"></script>
     <script>
     function myFunction(x) {
-      x.classList.toggle("change");
-      
-    }</script>
+      x.classList.toggle("change");      
+    }
+    WebDriverWait wait = new WebDriverWait(driver, 20);
+By addItem = By.xpath("//input[.='Add Item']");
+
+// get the "Add Item" element
+WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(addItem));
+
+//trigger the reaload of the page
+driver.findElement(By.id("...")).click();
+
+// wait the element "Add Item" to become stale
+wait.until(ExpectedConditions.stalenessOf(element));
+
+// click on "Add Item" once the page is reloaded
+wait.until(ExpectedConditions.presenceOfElementLocated(addItem)).click();
+      </script>
 </head>
 <body>
+<div id="content">
 
 <nav>
   <div id="navbar"><div class="container" onclick="myFunction(this)">
@@ -64,6 +79,6 @@
     <h2 class='lato aboutsmall'>Tourists have been harming local cultural sites and animals! We want to educate them about the rules of our island, so that we can all live without the fear of our precious island being destroyed.</h2>
   </div>
 </div>
-
+</div>
 </body>
 </html>
