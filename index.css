@@ -3,7 +3,7 @@
     height: 100vh;
     position: relative;
     background-color: black;
-    background-image: url(Images/homebg2.jpeg); 
+    background-image: url(Images/homebg3.jpg); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,8 +22,8 @@
     background: rgba(26, 26, 26, 0.7);
     backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
+  transition: 0.5s;
   height: 100vh;
-  transition-duration: 0.5s;
   position: relative;
   z-index: 100;
 }
@@ -36,18 +36,9 @@
     z-index: 2;
 }
 
-@media only screen and (max-height: 650px) {
+  @media only screen and (max-width: 600px) {
     .herotext {
-      transform: translatey(40vh)
-    }
-    .heroimg {
-        display: none;
-    }
-  }
-
-  @media only screen and (max-width: 1500px) {
-    .herotext {
-      transform: translatey(40vh)
+      transform: translatey(30vh)
     }
     .herolarge:hover {
         color: rgba(255, 255, 255, 0);
