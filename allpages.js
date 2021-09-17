@@ -45,3 +45,19 @@ window.onscroll = function() {scrollFunction()};
         } // End if
       });
     });
+
+
+    WebDriverWait; wait = new WebDriverWait(driver, 20);
+By; addItem = By.xpath("//input[.='Add Item']");
+
+// get the "Add Item" element //
+WebElement; element = wait.until(ExpectedConditions.presenceOfElementLocated(addItem));
+
+//trigger the reaload of the page //
+driver.findElement(By.id("...")).click();
+
+// wait the element "Add Item" to become stale //
+wait.until(ExpectedConditions.stalenessOf(element));
+
+// click on "Add Item" once the page is reloaded
+wait.until(ExpectedConditions.presenceOfElementLocated(addItem)).click();
