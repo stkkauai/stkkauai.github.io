@@ -10,6 +10,15 @@
     text-decoration: none;
 }
 
+.vcenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .center {
     text-align: center;
     margin: 0 auto;
@@ -41,6 +50,7 @@
 ::-webkit-scrollbar {
     width: 10px;
     transition-duration: 0.5s;
+    background-color: transparent;
   }
   
   /* Track */
@@ -82,9 +92,8 @@ body {
 
 /*Nav*/
 
-#navbar {
+#navicon {
     position: fixed; /* Make it stick/fixed */
-    top: -80px; /* Hide the navbar 50 px outside of the top view */
     width: 40px; /* Full width */
     height: 40px;
     transition: top 1s; /* Transition effect when sliding down (and up) */
@@ -94,19 +103,24 @@ body {
     margin: 20px;
 }
 
+.change #navicon {
+  padding: 0;
+  margin: 0;
+}
+
 .container {
   display: inline-block;
   cursor: pointer;
 }
 
 .bar1, .bar2, .bar3 {
-  -webkit-filter: invert(50%);
-  filter: invert(50%);
   width: 35px;
   height: 5px;
-  background-color: white;
+  background-color: black;
   margin: 6px 0;
   transition: 0.4s;
+  position: relative;
+  z-index: 998;
 }
 
 .change .bar1 {
@@ -119,6 +133,75 @@ body {
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.navitems a {
+  list-style-type: none;
+  padding: 10px 30px;
+  color: transparent;
+  text-decoration: none;
+  background: transparent;
+  font-weight: 600;
+  -webkit-text-stroke: 1px white;
+  transition: 0.4s;
+  text-shadow: 0px 0px 100px black;
+}
+.navitems a:hover {
+  color: white;
+  transition: 0.4s;
+}
+
+.navitems a.active {
+  color: white;
+  font-weight: 700;
+}
+
+.change .vcenternav {
+ font-size: 400%;
+ transition: 0.1s ease;
+}
+
+.navitems {
+  height: 0;
+  width: 100vw;
+  text-align: center;
+  transition: 1s;
+  position: relative;
+}
+
+.change .navitems {
+  transition: 0.5s;
+  width: 100vw;
+  height: 100px;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: rgba(131, 131, 131, 0.5);
+  color: rgb(0, 0, 0);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  transition: 1s;
+}
+
+.vcenternav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 0;
+  transition: 0.5s ease;
+}
+
+.absolutenav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  transform: translate(-20px, -20px)
 }
 
   /* Button Style */

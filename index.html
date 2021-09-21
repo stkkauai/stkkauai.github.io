@@ -10,20 +10,26 @@
     <link rel="stylesheet" href="allpages.css">
     <script src="allpages.js"></script>
     <script src="index.js"></script>
-    <script>
-    function myFunction(x) {
-      x.classList.toggle("change");      
-    }</script>
 </head>
 <body>
 <div id="content">
-
 <nav>
-  <div id="navbar"><div class="container" onclick="myFunction(this)">
+  <div id="navicon" onclick="menuchange(this)">
+  <div class="container">
     <div class="bar1"></div>
     <div class="bar2"></div>
-    <div class="bar3"></div>
-  </div></div>
+    <div class="bar3"></div>   
+  </div>
+  <div class='absolutenav'>
+  <div class='navitems urbanist' id="navitems">
+    <div class='vcenternav'>
+      <a class="active">Home</a>
+      <a href='rules.html' class="navfadein">Rules</a>
+      <a href='about.html' class="navfadein">About</a>
+    </div>
+  </div> 
+</div>
+</div>
 </nav>
 
 <div class='hero'>
@@ -36,19 +42,9 @@
     <div id='heroimg5'></div>
     <div id='heroimg6'></div>
     <div id='heroimg7'></div>
+    <div id='heroimg8'></div>
   </div>
   <div id='heropar' class='heropar'>
-    <script>
-      window.addEventListener("scroll", function() {
-        const distance = window.scrollY;
-        document.querySelector(".heropar").style.transform = `translateY(${distance *
-          0.5}px)`;
-        document.querySelector(
-          ".heropar]"
-        ).style.transform = `translateY(${distance * 0.5}px)`;
-        setTimeout(() => {
-      });})
-      </script>  
   <div class='herotext' id='herotext'>
     <h3 id='herotext1' class='urbanist heromedium' title='STK'>Sustainable Tourism Kauai</h3>
     <h1 id='herotext2' class='urbanist herolarge'>"Respect our aina and we'll respect you!"</h1>
